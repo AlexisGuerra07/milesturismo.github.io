@@ -364,8 +364,34 @@
             font-size: 1.5rem;
         }
 
-        .whatsapp {
+        .whatsapp-float {
             background: #25D366;
+            display: flex;
+            align-items: center;
+            width: auto;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            animation: pulse 2s infinite;
+            min-width: 280px;
+            justify-content: flex-start;
+            gap: 0.8rem;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-icon {
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+
+        .whatsapp-text {
+            font-size: 0.95rem;
+            font-weight: 600;
+            white-space: nowrap;
         }
 
         .phone {
@@ -375,6 +401,96 @@
         .floating-btn:hover {
             transform: scale(1.1);
             box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            }
+            50% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.7);
+            }
+            100% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            }
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background-color: var(--color-white);
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            position: relative;
+            animation: modalSlideIn 0.3s ease;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-content h2 {
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            text-align: center;
+            border-bottom: 2px solid var(--color-secondary);
+            padding-bottom: 0.5rem;
+        }
+
+        .modal-content p {
+            margin-bottom: 1.2rem;
+            line-height: 1.6;
+            color: var(--color-dark);
+            font-size: 1rem;
+        }
+
+        .close {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            color: var(--color-dark);
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: var(--color-light);
+            transition: var(--transition);
+        }
+
+        .close:hover {
+            background: var(--color-secondary);
+            color: var(--color-white);
+            transform: scale(1.1);
         }
 
         /* Footer */
@@ -496,6 +612,15 @@
             .floating-buttons {
                 right: 1rem;
                 bottom: 1rem;
+            }
+
+            .whatsapp-float {
+                min-width: 240px;
+                padding: 0.8rem 1.2rem;
+            }
+
+            .whatsapp-text {
+                font-size: 0.85rem;
             }
 
             .floating-btn {
@@ -698,8 +823,9 @@
 
     <!-- Floating Buttons -->
     <div class="floating-buttons">
-        <a href="https://wa.me/34600410975" class="floating-btn whatsapp" target="_blank" title="WhatsApp">
-            <i class="fab fa-whatsapp"></i>
+        <a href="https://wa.me/34600410975?text=¡Hola!%20Me%20interesa%20información%20sobre%20sus%20servicios%20de%20turismo." class="floating-btn whatsapp-float" target="_blank" title="WhatsApp">
+            <i class="fab fa-whatsapp whatsapp-icon"></i>
+            <span class="whatsapp-text">¿Te ayudo? Escríbeme por WhatsApp</span>
         </a>
         <a href="tel:+34600410975" class="floating-btn phone" title="Llamar">
             <i class="fas fa-phone"></i>
@@ -735,10 +861,42 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Miles Turismo. Todos los derechos reservados. | <a href="#" style="color: var(--color-accent);">Aviso Legal</a> | <a href="#" style="color: var(--color-accent);">Política de Privacidad</a></p>
+                <p>&copy; 2025 Miles Turismo. Todos los derechos reservados. | <a href="#" id="avisoLegalLink" style="color: var(--color-accent); cursor: pointer;">Aviso Legal</a> | <a href="#" id="privacidadLink" style="color: var(--color-accent); cursor: pointer;">Política de Privacidad</a></p>
             </div>
         </div>
     </footer>
+
+    <!-- Modal Aviso Legal -->
+    <div id="modalAvisoLegal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeAvisoLegal">&times;</span>
+            <section id="aviso-legal">
+                <h2>🔐 Aviso Legal</h2>
+                <p>
+                    Esta página web pertenece a una profesional Licenciada en Turismo, con título convalidado y apostillado en España. Actualmente, este proyecto se encuentra en fase inicial y no constituye aún una actividad económica formal registrada como autónoma.
+                </p>
+                <p>
+                    Toda la información, recomendaciones o asesoramiento ofrecidos a través de esta página son de carácter informativo y personal. No se emiten reservas ni se comercializan directamente vuelos, hoteles o paquetes turísticos.
+                </p>
+            </section>
+        </div>
+    </div>
+
+    <!-- Modal Política de Privacidad -->
+    <div id="modalPrivacidad" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closePrivacidad">&times;</span>
+            <section id="privacidad">
+                <h2>🔒 Política de privacidad</h2>
+                <p>
+                    En Miles Turismo valoramos tu privacidad. Los datos personales que compartas (nombre, correo electrónico, número de WhatsApp o mensaje) serán utilizados únicamente para responder a tu consulta.
+                </p>
+                <p>
+                    No compartimos tus datos con terceros ni los almacenamos en ninguna base de datos automatizada. Podés solicitar en cualquier momento que eliminemos tu información escribiendo a nuestro contacto.
+                </p>
+            </section>
+        </div>
+    </div>
 
     <script>
         // Header scroll effect
@@ -845,6 +1003,59 @@
             };
             
             setTimeout(typeWriter, 1000);
+        });
+
+        // Modal functionality
+        const avisoLegalLink = document.getElementById('avisoLegalLink');
+        const privacidadLink = document.getElementById('privacidadLink');
+        const modalAvisoLegal = document.getElementById('modalAvisoLegal');
+        const modalPrivacidad = document.getElementById('modalPrivacidad');
+        const closeAvisoLegal = document.getElementById('closeAvisoLegal');
+        const closePrivacidad = document.getElementById('closePrivacidad');
+
+        // Open modals
+        avisoLegalLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            modalAvisoLegal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+
+        privacidadLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            modalPrivacidad.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+
+        // Close modals
+        closeAvisoLegal.addEventListener('click', () => {
+            modalAvisoLegal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        closePrivacidad.addEventListener('click', () => {
+            modalPrivacidad.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close modals when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === modalAvisoLegal) {
+                modalAvisoLegal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+            if (e.target === modalPrivacidad) {
+                modalPrivacidad.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close modals with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                modalAvisoLegal.style.display = 'none';
+                modalPrivacidad.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
         });
     </script>
 </body>
