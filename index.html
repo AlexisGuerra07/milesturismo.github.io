@@ -296,39 +296,29 @@
         /* Testimonials Section */
         .testimonials {
             padding: 6rem 0;
-            background: var(--color-white);
+            background: var(--color-light);
         }
 
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
+            gap: 2.5rem;
             margin-top: 3rem;
         }
 
         .testimonial-card {
-            background: var(--color-light);
-            padding: 2rem;
-            border-radius: 20px;
+            background: var(--color-white);
+            padding: 2.5rem;
+            border-radius: 15px;
             box-shadow: var(--shadow);
             transition: var(--transition);
             position: relative;
-            overflow: hidden;
-        }
-
-        .testimonial-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+            border: 1px solid rgba(123, 167, 188, 0.1);
         }
 
         .testimonial-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 30px rgba(123, 167, 188, 0.15);
         }
 
         .testimonial-content {
@@ -337,18 +327,24 @@
             gap: 1.5rem;
         }
 
+        .testimonial-text {
+            position: relative;
+        }
+
         .testimonial-text p {
             font-size: 1.1rem;
-            line-height: 1.6;
+            line-height: 1.7;
             color: var(--color-dark);
-            font-style: italic;
             margin: 0;
+            padding-left: 1rem;
+            border-left: 3px solid var(--color-secondary);
         }
 
         .testimonial-author {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            margin-top: 1rem;
         }
 
         .author-info {
@@ -358,20 +354,21 @@
         }
 
         .author-avatar {
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            background: var(--color-primary);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
+            color: var(--color-white);
         }
 
         .author-info h4 {
             color: var(--color-primary);
-            font-size: 1rem;
-            margin: 0 0 0.3rem 0;
+            font-size: 0.95rem;
+            margin: 0 0 0.2rem 0;
             font-weight: 600;
         }
 
@@ -381,7 +378,7 @@
         }
 
         .rating i {
-            color: #FFD700;
+            color: var(--color-secondary);
             font-size: 0.9rem;
         }
 
@@ -827,7 +824,7 @@
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#nuestros-clientes">Nuestros Clientes</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
             <div class="mobile-menu" id="mobile-menu">
@@ -846,14 +843,14 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonios">
+    <section class="testimonials" id="nuestros-clientes">
         <div class="container">
-            <h2 class="section-title fade-in">Testimonios</h2>
+            <h2 class="section-title fade-in">Nuestros Clientes</h2>
             <div class="testimonials-grid">
                 <div class="testimonial-card fade-in">
                     <div class="testimonial-content">
                         <div class="testimonial-text">
-                            <i class="fas fa-quote-left" style="font-size: 2rem; color: var(--color-secondary); opacity: 0.3; margin-bottom: 1rem;"></i>
+                            <i class="fas fa-quote-left" style="font-size: 1.5rem; color: var(--color-secondary); opacity: 0.3; position: absolute; top: -0.5rem; left: -0.5rem;"></i>
                             <p>"Gracias por tu ayuda, encontré justo el vuelo que necesitaba para ir y volver de Colombia. Me ahorraste mucho tiempo."</p>
                         </div>
                         <div class="testimonial-author">
@@ -879,7 +876,7 @@
                 <div class="testimonial-card fade-in">
                     <div class="testimonial-content">
                         <div class="testimonial-text">
-                            <i class="fas fa-quote-left" style="font-size: 2rem; color: var(--color-secondary); opacity: 0.3; margin-bottom: 1rem;"></i>
+                            <i class="fas fa-quote-left" style="font-size: 1.5rem; color: var(--color-secondary); opacity: 0.3; position: absolute; top: -0.5rem; left: -0.5rem;"></i>
                             <p>"Tus recomendaciones fueron muy útiles, me encantó el hotel. ¡Gracias por pensar en todo!"</p>
                         </div>
                         <div class="testimonial-author">
@@ -1092,8 +1089,6 @@
                     <div class="social-links">
                         <a href="https://www.facebook.com/profile.php?id=61578909692197" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/milesturismo?utm_source=ig_web_button_share_sheet&igsh=ZzU0bGpqNXltcm9x" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
