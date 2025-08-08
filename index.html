@@ -3,7 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miles Turismo - Tu viaje empieza aquí</title>
+    <title>Miles Turismo - Tu viaje empieza aquí | Agencia de Viajes Barcelona</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Miles Turismo: Agencia de viajes personalizada en Barcelona. Especialistas en vuelos, hoteles y experiencias únicas. Servicio multilingüe profesional.">
+    <meta name="keywords" content="agencia viajes Barcelona, vuelos baratos, hoteles Barcelona, turismo personalizado, viajes a medida, multilingual travel agent">
+    <meta name="author" content="Miles Turismo">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Miles Turismo - Agencia de Viajes en Barcelona">
+    <meta property="og:description" content="Transformamos viajes en experiencias únicas. Planificación personalizada desde Barcelona.">
+    <meta property="og:image" content="https://milesturismo.com/images/perfil.jpg">
+    <meta property="og:url" content="https://milesturismo.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
@@ -170,10 +187,36 @@
             box-shadow: 0 6px 20px rgba(0,0,0,0.2);
         }
 
+        /* Mission Statement */
+        .mission-statement {
+            background: var(--color-white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .mission-text {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .mission-text h2 {
+            font-size: 2rem;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .mission-text p {
+            font-size: 1.2rem;
+            color: var(--color-dark);
+            line-height: 1.8;
+        }
+
         /* About Section */
         .about {
             padding: 6rem 0;
-            background: var(--color-white);
+            background: var(--color-light);
         }
 
         .container {
@@ -242,7 +285,7 @@
         /* Services Section */
         .services {
             padding: 6rem 0;
-            background: var(--color-light);
+            background: var(--color-white);
         }
 
         .services-grid {
@@ -253,7 +296,7 @@
         }
 
         .service-card {
-            background: var(--color-white);
+            background: var(--color-light);
             padding: 2rem;
             border-radius: 15px;
             text-align: center;
@@ -281,6 +324,7 @@
         .service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            background: var(--color-white);
         }
 
         .service-icon {
@@ -743,6 +787,18 @@
                 font-size: 1.1rem;
             }
 
+            .mission-statement {
+                padding: 3rem 0;
+            }
+
+            .mission-text h2 {
+                font-size: 1.5rem;
+            }
+
+            .mission-text p {
+                font-size: 1.1rem;
+            }
+
             .about-content,
             .contact-content {
                 grid-template-columns: 1fr;
@@ -883,6 +939,7 @@
             </a>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#nuestros-clientes">Nuestros Clientes</a></li>
                 <li><a href="#contacto">Contacto</a></li>
@@ -897,8 +954,92 @@
     <section class="hero" id="inicio">
         <div class="hero-content fade-in">
             <h1>Tu viaje empieza aquí</h1>
-            <p>Te acompaño paso a paso</p>
+            <p>Te acompaño paso a paso en cada aventura</p>
             <a href="#contacto" class="cta-button">Planifica tu viaje</a>
+        </div>
+    </section>
+
+    <!-- Mission Statement Section -->
+    <section class="mission-statement">
+        <div class="container">
+            <div class="mission-text fade-in">
+                <h2>Transformando viajes en experiencias únicas</h2>
+                <p>En Miles Turismo creemos que cada viaje es una oportunidad para conectar con nuevas culturas, descubrir lugares extraordinarios y crear recuerdos que durarán toda la vida. Desde Barcelona, te ayudamos a convertir tus sueños de viaje en realidad.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="sobre-mi">
+        <div class="container">
+            <h2 class="section-title fade-in">Sobre Mí</h2>
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <h3>Tu experta en turismo multilingüe en Barcelona</h3>
+                    <p>Soy licenciada en turismo y puedo ayudarte a organizar tu vuelo, hotel y experiencia completa. Con años de experiencia en el sector turístico, me especializo en crear viajes únicos y memorables adaptados a tus necesidades y presupuesto.</p>
+                    <p>Desde Barcelona, te ofrezco un servicio personalizado que va más allá de una simple reserva. Te acompaño en cada paso del proceso, desde la planificación inicial hasta tu regreso a casa, asegurándome de que cada detalle esté perfectamente organizado.</p>
+                    <div class="languages-section" style="margin-top: 1.5rem; padding: 1.5rem; background: var(--color-white); border-radius: 15px; box-shadow: var(--shadow);">
+                        <h4 style="color: var(--color-primary); margin-bottom: 1rem; font-size: 1.2rem; text-align: center;">
+                            <i class="fas fa-globe" style="margin-right: 0.5rem; color: var(--color-secondary);"></i>
+                            Idiomas que hablo
+                        </h4>
+                        <div class="languages-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 0.8rem; margin-bottom: 1rem;">
+                            <span style="background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); color: var(--color-white); padding: 0.6rem 1rem; border-radius: 25px; text-align: center; font-size: 0.9rem; font-weight: 500; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: var(--transition);">
+                                <i class="fas fa-star" style="margin-right: 0.4rem;"></i>Español
+                            </span>
+                            <span style="background: var(--color-light); color: var(--color-dark); padding: 0.6rem 1rem; border-radius: 25px; text-align: center; font-size: 0.9rem; font-weight: 500; border: 2px solid var(--color-secondary); box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: var(--transition);">
+                                <i class="fas fa-comments" style="color: var(--color-secondary); margin-right: 0.4rem;"></i>Inglés
+                            </span>
+                            <span style="background: var(--color-light); color: var(--color-dark); padding: 0.6rem 1rem; border-radius: 25px; text-align: center; font-size: 0.9rem; font-weight: 500; border: 2px solid var(--color-secondary); box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: var(--transition);">
+                                <i class="fas fa-comments" style="color: var(--color-secondary); margin-right: 0.4rem;"></i>Portugués
+                            </span>
+                            <span style="background: var(--color-light); color: var(--color-dark); padding: 0.6rem 1rem; border-radius: 25px; text-align: center; font-size: 0.9rem; font-weight: 500; border: 2px solid var(--color-secondary); box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: var(--transition);">
+                                <i class="fas fa-comments" style="color: var(--color-secondary); margin-right: 0.4rem;"></i>Italiano
+                            </span>
+                            <span style="background: var(--color-light); color: var(--color-dark); padding: 0.6rem 1rem; border-radius: 25px; text-align: center; font-size: 0.9rem; font-weight: 500; border: 2px solid var(--color-accent); box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: var(--transition);">
+                                <i class="fas fa-comment" style="color: var(--color-accent); margin-right: 0.4rem;"></i>Catalán
+                            </span>
+                        </div>
+                        <p style="text-align: center; font-size: 0.95rem; color: var(--color-dark); font-style: italic;">
+                            <i class="fas fa-heart" style="color: var(--color-secondary); margin-right: 0.3rem;"></i>
+                            Comunicación fluida para viajeros de todo el mundo
+                        </p>
+                    </div>
+                </div>
+                <div class="about-image fade-in">
+                    <img src="images/perfil.jpg" alt="Miles Turismo - Especialista en turismo y viajes en Barcelona" style="width: 100%; height: 400px; object-fit: cover; border-radius: 15px; box-shadow: var(--shadow); transition: var(--transition);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <h2 class="section-title fade-in">Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-plane-departure"></i>
+                    </div>
+                    <h3>Compra de Vuelos</h3>
+                    <p>Encuentra las mejores ofertas de vuelos adaptadas a tu presupuesto y horarios. Gestiono todas las reservas y cambios necesarios para que viajes sin preocupaciones.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <h3>Reserva de Hoteles</h3>
+                    <p>Selecciono los mejores alojamientos según tus preferencias y necesidades. Desde hoteles boutique hasta resorts de lujo, encuentro la opción perfecta para ti.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Experiencias Únicas</h3>
+                    <p>Diseño itinerarios personalizados que conectan con la cultura local. Cada viaje es una historia diferente, creada especialmente para ti con los mejores consejos de insider.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -958,79 +1099,31 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section class="about" id="sobre-mi">
-        <div class="container">
-            <h2 class="section-title fade-in">Sobre Mí</h2>
-            <div class="about-content">
-                <div class="about-text fade-in">
-                    <h3>Tu experta en turismo multilingüe en Barcelona</h3>
-                    <p>Soy licenciada en turismo y puedo ayudarte a organizar tu vuelo, hotel y experiencia completa. Con años de experiencia en el sector turístico, me especializo en crear viajes únicos y memorables adaptados a tus necesidades y presupuesto.</p>
-                    <p>Desde Barcelona, te ofrezco un servicio personalizado que va más allá de una simple reserva. Te acompaño en cada paso del proceso, desde la planificación inicial hasta tu regreso a casa, asegurándome de que cada detalle esté perfectamente organizado.</p>
-                    <div class="languages-section" style="margin-top: 1.5rem; padding: 1.5rem; background: var(--color-light); border-radius: 15px; box-shadow: var(--shadow);">
-                        <h4 style="color: var(--color-primary); margin-bottom: 1rem; font-size: 1.2rem; text-align: center;">
-                            <i class="fas fa-globe" style="margin-right: 0.5rem; color: var(--color-secondary);"></i>
-                            Idiomas que hablo
-                        </h4>
-                        <div class="languages-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 0.8rem; margin-bottom: 1rem;">
-                            <span style="background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); color: var(--color-white); padding: 0.6rem 1rem; border-radius: 25px; text-align: center; font-size: 0.9rem; font-weight: 500; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: var(--transition);">
-                                <i class="fas fa-star" style="margin-right: 0.4rem;"></i>Español
-                            </span>
-                            <span style="background: var(--color-white); color: var(--color-dark); padding: 0.6rem 1rem; border-radius: 25px; text-align: center; font-size: 0.9rem; font-weight: 500; border: 2px solid var(--color-secondary); box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: var(--transition);">
-                                <i class="fas fa-comments" style="color: var(--color-secondary); margin-right: 0.4rem;"></i>Inglés
-                            </span>
-                            <span style="background: var(--color-white); color: var(--color-dark); padding: 0.6rem 1rem; border-radius: 25px; text-align: center; font-size: 0.9rem; font-weight: 500; border: 2px solid var(--color-secondary); box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: var(--transition);">
-                                <i class="fas fa-comments" style="color: var(--color-secondary); margin-right: 0.4rem;"></i>Portugués
-                            </span>
-                            <span style="background: var(--color-white); color: var(--color-dark); padding: 0.6rem 1rem; border-radius: 25px; text-align: center; font-size: 0.9rem; font-weight: 500; border: 2px solid var(--color-secondary); box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: var(--transition);">
-                                <i class="fas fa-comments" style="color: var(--color-secondary); margin-right: 0.4rem;"></i>Italiano
-                            </span>
-                            <span style="background: var(--color-white); color: var(--color-dark); padding: 0.6rem 1rem; border-radius: 25px; text-align: center; font-size: 0.9rem; font-weight: 500; border: 2px solid var(--color-accent); box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: var(--transition);">
-                                <i class="fas fa-comment" style="color: var(--color-accent); margin-right: 0.4rem;"></i>Catalán
-                            </span>
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-content">
+                        <div class="testimonial-text">
+                            <i class="fas fa-quote-left" style="font-size: 1.5rem; color: var(--color-secondary); opacity: 0.3; position: absolute; top: -0.5rem; left: -0.5rem;"></i>
+                            <p>"No solo visitamos Barcelona, vivimos su cultura y historia. Una experiencia transformadora que nunca olvidaremos."</p>
                         </div>
-                        <p style="text-align: center; font-size: 0.95rem; color: var(--color-dark); font-style: italic;">
-                            <i class="fas fa-heart" style="color: var(--color-secondary); margin-right: 0.3rem;"></i>
-                            Comunicación fluida para viajeros de todo el mundo
-                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <div class="author-avatar">
+                                    <i class="fas fa-globe" style="color: var(--color-white);"></i>
+                                </div>
+                                <div>
+                                    <h4>Familia de Estados Unidos</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="about-image fade-in">
-                    <img src="images/perfil.jpg" alt="Miles Turismo - Especialista en turismo y viajes" style="width: 100%; height: 400px; object-fit: cover; border-radius: 15px; box-shadow: var(--shadow); transition: var(--transition);">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="servicios">
-        <div class="container">
-            <h2 class="section-title fade-in">Nuestros Servicios</h2>
-            <div class="services-grid">
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-plane-departure"></i>
-                    </div>
-                    <h3>Compra de Vuelos</h3>
-                    <p>Encuentra las mejores ofertas de vuelos adaptadas a tu presupuesto y horarios. Gestiono todas las reservas y cambios necesarios para que viajes sin preocupaciones.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-hotel"></i>
-                    </div>
-                    <h3>Reserva de Hoteles</h3>
-                    <p>Selecciono los mejores alojamientos según tus preferencias y necesidades. Desde hoteles boutique hasta resorts de lujo, encuentro la opción perfecta para ti.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-map-marked-alt"></i>
-                    </div>
-                    <h3>Planificación Personalizada</h3>
-                    <p>Diseño itinerarios únicos y experiencias auténticas. Cada viaje es una historia diferente, creada especialmente para ti con los mejores consejos locales.</p>
                 </div>
             </div>
         </div>
@@ -1130,7 +1223,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Miles Turismo</h3>
-                    <p>Tu agencia de viajes de confianza en Barcelona. Creamos experiencias únicas e inolvidables.</p>
+                    <p>Tu agencia de viajes de confianza en Barcelona. Transformamos sueños en experiencias únicas e inolvidables.</p>
                     <div class="social-links">
                         <a href="https://www.facebook.com/profile.php?id=61578909692197" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/milesturismo?utm_source=ig_web_button_share_sheet&igsh=ZzU0bGpqNXltcm9x" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
@@ -1146,8 +1239,8 @@
                     <h3>Servicios</h3>
                     <p>• Compra de vuelos</p>
                     <p>• Reserva de hoteles</p>
-                    <p>• Planificación personalizada</p>
-                    <p>• Asesoramiento turístico</p>
+                    <p>• Experiencias personalizadas</p>
+                    <p>• Asesoramiento especializado</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -1295,6 +1388,19 @@
             setTimeout(typeWriter, 1000);
         });
 
+        // Form submission feedback
+        const contactForm = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+
+        contactForm.addEventListener('submit', function(e) {
+            formStatus.innerHTML = '<span style="color: var(--color-primary);"><i class="fas fa-spinner fa-spin"></i> Enviando mensaje...</span>';
+            
+            // Show success message after form submission
+            setTimeout(() => {
+                formStatus.innerHTML = '<span style="color: var(--color-secondary);"><i class="fas fa-check-circle"></i> ¡Mensaje enviado con éxito! Te contactaremos pronto.</span>';
+            }, 2000);
+        });
+
         // Modal functionality
         const avisoLegalLink = document.getElementById('avisoLegalLink');
         const privacidadLink = document.getElementById('privacidadLink');
@@ -1347,6 +1453,9 @@
                 document.body.style.overflow = 'auto';
             }
         });
+
+        // Add smooth scroll behavior for better UX
+        document.documentElement.style.scrollBehavior = 'smooth';
     </script>
 </body>
 </html>
