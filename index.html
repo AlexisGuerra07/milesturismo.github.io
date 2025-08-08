@@ -587,6 +587,13 @@
             box-shadow: 0 6px 20px rgba(0,0,0,0.3);
         }
 
+        /* Evitar superposición con footer en móviles */
+        @media (max-width: 768px) {
+            .floating-buttons {
+                bottom: 6rem; /* Subir el botón para evitar superposición */
+            }
+        }
+
         @keyframes pulse {
             0% {
                 box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
@@ -681,7 +688,7 @@
         .footer {
             background: var(--color-dark);
             color: var(--color-white);
-            padding: 3rem 0 1rem;
+            padding: 3rem 0 5rem; /* Aumentado padding inferior para evitar superposición */
             text-align: center;
         }
 
@@ -885,7 +892,7 @@
 
             .floating-buttons {
                 right: 1rem;
-                bottom: 1rem;
+                bottom: 6rem; /* Mantener distancia del footer */
             }
 
             .whatsapp-float {
