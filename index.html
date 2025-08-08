@@ -231,10 +231,12 @@
             height: 400px;
             object-fit: cover;
             transition: var(--transition);
+            border-radius: 15px;
         }
 
         .about-image:hover img {
-            transform: scale(1.1);
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
         }
 
         /* Services Section */
@@ -426,6 +428,55 @@
         .info-item i {
             font-size: 1.5rem;
             color: var(--color-secondary);
+        }
+
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--color-dark);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: var(--color-white);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(123, 167, 188, 0.1);
+        }
+
+        .submit-btn {
+            background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+            color: var(--color-white);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            box-shadow: var(--shadow);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
         }
 
         /* Floating Buttons */
@@ -698,6 +749,11 @@
                 gap: 2rem;
             }
 
+            .about-image img {
+                height: 300px;
+                margin-bottom: 2rem;
+            }
+
             .contact-form {
                 padding: 1.5rem;
                 margin-bottom: 1rem;
@@ -771,6 +827,10 @@
             .logo img {
                 width: 40px;
                 height: 40px;
+            }
+
+            .about-image img {
+                height: 250px;
             }
 
             .contact-form {
@@ -940,22 +1000,7 @@
                     </div>
                 </div>
                 <div class="about-image fade-in">
-                    <div style="display: flex; align-items: center; justify-content: center; height: 400px; background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)); border-radius: 15px; position: relative; overflow: hidden;">
-                        <div style="text-align: center; color: var(--color-white); z-index: 2;">
-                            <div style="font-size: 4rem; margin-bottom: 1rem; opacity: 0.9;">
-                                <i class="fas fa-user-tie"></i>
-                            </div>
-                            <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem; font-weight: 600;">Profesional Certificada</h3>
-                            <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 1rem;">Licenciada en Turismo</p>
-                            <div style="display: flex; justify-content: center; gap: 1rem; font-size: 1.5rem;">
-                                <i class="fas fa-certificate" style="opacity: 0.8;"></i>
-                                <i class="fas fa-award" style="opacity: 0.8;"></i>
-                                <i class="fas fa-medal" style="opacity: 0.8;"></i>
-                            </div>
-                        </div>
-                        <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: rgba(255,255,255,0.1); border-radius: 50%; z-index: 1;"></div>
-                        <div style="position: absolute; bottom: -30px; left: -30px; width: 100px; height: 100px; background: rgba(255,255,255,0.1); border-radius: 50%; z-index: 1;"></div>
-                    </div>
+                    <img src="images/perfil.jpg" alt="Miles Turismo - Especialista en turismo y viajes" style="width: 100%; height: 400px; object-fit: cover; border-radius: 15px; box-shadow: var(--shadow); transition: var(--transition);">
                 </div>
             </div>
         </div>
